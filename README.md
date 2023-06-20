@@ -1,6 +1,6 @@
 # CUinMess
 
-This is a Python script that uses face recognition to mark attendance for staff members in a mess at Chandigarh University. The script captures images from a webcam, compares them to a set of known faces, and marks attendance for any staff members who are recognized.
+This is a Python script that uses face recognition to mark attendance for staff members in a mess at Chitkara University. The script captures images from a webcam, compares them to a set of known faces, and marks attendance for any staff members who are recognized.
 
 Getting Started
 To use this script, you will need to have Python 3.x installed on your computer, as well as the following libraries:
