@@ -1,31 +1,55 @@
-# CUinMess
+# Face Recognition Attendance System
 
-This is a Python script that uses face recognition to mark attendance for students in a mess at Chitkara University. The script captures images from a webcam, compares them to a set of known faces, and marks attendance for any student members who are recognized.
+This project is an implementation of a face recognition attendance system using OpenCV and face_recognition library. The system captures video from a webcam, detects faces in real-time, and matches them with known faces to mark attendance. It also records the time of attendance in a CSV file.
 
-Getting Started
-To use this script, you will need to have Python 3.x installed on your computer, as well as the following libraries:
+## Features
 
-- OpenCV
-- NumPy
-- face_recognition
- You can install these libraries using pip:
- ```
- pip install opencv-python numpy face_recognition
-```
+- Real-time face detection and recognition
+- Matching detected faces with known faces
+- Marking attendance with date and time stamp
+- Saving attendance records in a CSV file
 
-Once you have installed the necessary libraries, you can run the script by navigating to the directory where the MessAttendance.py file is located and running the following command:
+## Installation
 
-```
-python MessAttendance.py
-```
-# Usage
-When you run the script, it will open up a window showing the output from your webcam. The script will automatically detect any faces in the video stream and compare them to a set of known faces. If a match is found, the script will mark attendance for the corresponding staff member.
+To run the project, follow these steps:
 
-The attendance records are stored in a CSV file called Attendance.csv. Each record consists of the staff member's name and the time that they were recognized.
+1. Clone the repository or download the project files.
+2. Install the required dependencies:
+   - OpenCV (`pip install opencv-python`)
+   - face_recognition (`pip install face_recognition`)
 
-# Contributing
-If you would like to contribute to this project, feel free to submit a pull request.
+## Usage
 
+1. Prepare the Known Faces:
+   - Create a directory named "KnownFaces" and place images of known individuals in it.
+   - Name the images according to the respective individuals.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+2. Run the Program:
+   - Open the terminal or command prompt and navigate to the project directory.
+   - Run the command `python main.py` to start the face recognition attendance system.
+
+3. Face Recognition and Attendance Marking:
+   - The webcam will open, and faces will be detected in real-time.
+   - If a known face is detected, it will be matched with the known faces from the "KnownFaces" directory.
+   - If a match is found, the person's name will be displayed on the video feed, and attendance will be marked with the current date and time in the "Attendance.csv" file.
+
+4. Exit the Program:
+   - Press the "Esc" key to close the program.
+
+## Troubleshooting
+
+- If the program encounters any issues with face detection or recognition, ensure the following:
+  - The known faces in the "KnownFaces" directory have distinct and clear images.
+  - The webcam is positioned properly and has good lighting conditions.
+  - Adjust the parameters for face detection and recognition in the code to optimize results.
+
+## Future Enhancements
+
+- Add a graphical user interface (GUI) to enhance the user experience.
+- Implement a database to store attendance records and provide additional functionalities like generating reports and statistics.
+- Integrate the system with an access control system to automate attendance management in various environments.
+
+## References
+
+- OpenCV: [https://opencv.org/](https://opencv.org/)
+- face_recognition library: [https://github.com/ageitgey/face_recognition](https://github.com/ageitgey/face_recognition)
